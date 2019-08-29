@@ -1,0 +1,32 @@
+{
+  "name": "shapely-repository",
+  "version": "1.0.0",
+  "private": true,
+  "description": "consistent react components for web.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cd site && yarn dev"
+  },
+  "workspaces": [
+    "site",
+    "packages/shapely-react",
+    "pacakges/sly-table"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datalking/shapely-ui.git"
+  },
+  "keywords": [
+    "react",
+    "react-components"
+  ],
+  "author": "jinyaoo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/datalking/shapely-ui/issues"
+  },
+  "homepage": "https://github.com/datalking/shapely-ui#readme",
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  }
+}

@@ -1,0 +1,32 @@
+
+# auto-generated files
+.vscode/
+
+.idea/
+*.iml
+
+.settings/
+.classpath
+.project
+.factorypath
+
+.DS_Store
+
+
+# intermediate files
+node_modules/
+package-lock.json
+yarn.lock
+
+target/
+build/
+tomcat.**
+
+dist/
+lib/
+
+*.log
+
+# veiled files
+bak/
+
