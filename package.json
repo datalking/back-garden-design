@@ -22,7 +22,7 @@
     "lerna-version-ls": "lerna list -la",
     "lerna-version": "lerna version --no-git-tag-version --no-push -m 'chore: publish'",
     "lerna-publish": "lerna publish --from-package",
-    "updatenpm": "lernaupdate --dedupe --lazy",
+    "updatenpm": "syncpack fix-mismatches",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,json,css}'"
   },
@@ -72,7 +72,6 @@
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "lerna": "^3.22.1",
-    "lerna-update-wizard": "^0.17.8",
     "prettier": "^2.0.5",
     "prettier-eslint": "^11.0.0",
     "prettier-eslint-cli": "^5.0.0",
