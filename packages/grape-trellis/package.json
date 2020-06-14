@@ -1,0 +1,20 @@
+{
+  "name": "grape-trellis",
+  "version": "0.0.1",
+  "description": "handy list and table component using React.",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn run storybook",
+    "storybook": "start-storybook -p 8000 -c .storybook",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "table",
+    "grid",
+    "list"
+  ],
+  "author": "jinyaoo <jinyaoo@qq.com>",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

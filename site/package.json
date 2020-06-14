@@ -1,0 +1,19 @@
+{
+  "name": "back-garden-design-site",
+  "version": "0.0.1",
+  "description": "source code for back-garden-design website.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn run www",
+    "www": "start-storybook -p 8000 -c .storybook",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "docs"
+  ],
+  "author": "jinyaoo <jinyaoo@qq.com>",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

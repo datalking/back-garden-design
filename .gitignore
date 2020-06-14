@@ -1,17 +1,11 @@
-
 # auto-generated files
-.vscode/
-
 .idea/
 *.iml
-
 .settings/
 .classpath
 .project
 .factorypath
-
 .DS_Store
-
 
 # intermediate files
 node_modules/
@@ -22,11 +16,12 @@ target/
 build/
 tomcat.**
 
+*.log
+
 dist/
 lib/
 
-*.log
 
-# veiled files
+# hidden files 
 bak/
 

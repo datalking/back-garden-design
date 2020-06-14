@@ -1,0 +1,59 @@
+import { BgTheme, darkTheme, Button } from '../index';
+import { ThemeProvider } from 'styled-components';
+
+# back-garden-react
+
+> themeable react components for the web
+
+> 可更换主题的组件库
+
+## features
+
+- theme-based react components compatible with the [Theme Specification](https://system-ui.com/theme)
+- better consistency with constraint-based [style prop](https://styled-system.com) functions
+- easy to make components responsive with array-based values
+- component APIs are closely related to APIs of [Ant Design](https://ant.design) components for migration
+- misc
+  - components styled with css-in-js, using api compatible with both styled-components and emotion
+  - support component variants
+
+## Quickstart
+
+### install
+
+```
+yarn add back-garden-react styled-components
+```
+
+### usage
+
+#### Prerequisite
+
+you must have `ThemeProvider` on top of your app to load the theme object before using the imported react component.
+
+- A: use `BgTheme` from `back-garden-react` (a wrapper of `ThemeProvider` under the hood)
+
+```
+import React from 'react';
+import { Button } from 'back-garden-react';
+
+export default () => <Button appearance='primary'>Primary</Button>;
+```
+
+<BgTheme>
+  <Button appearance='primary'>Primary</Button>
+</BgTheme>
+
+- B: directly use `ThemeProvider` from `styled-components`
+
+<ThemeProvider theme={darkTheme}>
+  <Button appearance='primary'>Primary</Button>
+</ThemeProvider>
+
+#### this button use html <code>button</code> tag
+
+<button style={{backgroundColor: '#ffee99'}}>html button</button>
+
+```
+<button style={{backgroundColor: '#ffee99'}}>html button</button>
+```

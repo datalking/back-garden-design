@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base",
+  "compilerOptions": {
+    "rootDir": "./",
+    "allowJs": true,
+  },
+  "exclude": [
+    "bak/**/*",
+    "**/*.js",
+    "**/dist/**",
+    "**/node_modules/**"
+  ]
+}

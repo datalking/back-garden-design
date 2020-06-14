@@ -1,22 +1,24 @@
 {
-  "command": {
-    "publish": {
-      "ignore": [
-        "*.md",
-        ".npmrc",
-        "yarn.lock",
-        ".eslintrc",
-        ".eslintignore",
-        ".gitignore",
-        "__tests__/**",
-        "scripts/**"
-      ]
-    }
-  },
   "packages": [
-    "packages/*"
+    "packages/*",
+    "site"
   ],
   "version": "independent",
   "npmClient": "yarn",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "*.md",
+        "**/story.js",
+        "**/story.tsx",
+        "**/__tests__/**",
+        "*.test.js",
+        "*.test.ts",
+        "*.test.tsx",
+        "**/__snapshots__/**",
+        "**/examples/**"
+      ]
+    }
+  }
 }

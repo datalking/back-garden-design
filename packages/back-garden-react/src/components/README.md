@@ -1,0 +1,95 @@
+# components
+
+> ready-to-use react components
+
+## categories
+
+- general/通用
+  - typography/label
+  - color
+  - space
+  - border/position/shadow
+  - icon
+  - button/group
+  - link
+  - image
+- foundation/基础
+  - Draggable
+  - Resizable
+  - Animation
+- layout/布局
+  - container
+  - box
+  - grid
+  - hidden
+- navigation/导航
+  - navbar
+  - menu
+  - dropdown
+  - breadcrumb
+  - affix
+  - steps
+  - drawer/sidenav
+  - back-top
+  - divider
+  - tabs
+  - page-header
+  - pagination
+  - floating-action-button
+  - snack-bar
+- input/输入
+  - auto-complete
+  - radio
+  - checkbox
+  - form
+  - select
+  - cascade-select
+  - tree-select
+  - date-picker
+  - time-picker
+  - color-picker
+  - search-bar
+  - input
+  - input-number
+  - rate-star/score
+  - switch/toggle
+  - slider
+  - file-uploader
+  - image-uploader
+- display/展示
+  - badge
+  - tag
+  - comment
+  - collapse/accordion
+  - details
+  - carousel
+  - card
+  - list
+  - grid
+  - table
+  - tree
+  - toc/anchor/scrollspy
+  - statistics
+  - avatar
+  - timeline
+  - empty
+  - lightbox
+  - jumbotron
+- feedback/反馈
+  - alert
+  - popover
+  - tooltip
+  - modal/dialog
+  - message/toast
+  - notification
+  - progress
+  - loading/spinner
+  - skeleton
+- incubator/实验
+  - transfer
+  - calendar
+  - flag-icon
+- connected/基于第三方接口创建的组件
+  - github-repo-card 仓库名片组件
+  - mapbox 地图组件
+  - disqus 评论组件

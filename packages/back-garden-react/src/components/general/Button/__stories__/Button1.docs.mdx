@@ -1,0 +1,85 @@
+import { LiveComponent } from '../../../../../stories';
+import { BgTheme, Button, AutoSpacedContainer } from '../../../../components';
+
+# Button
+
+## Overview
+
+- Buttons are used to communicate actions that users can take.
+- common use cases
+  - Form
+  - Card/Dialog/Modal
+  - 其他组件
+
+## Usage
+
+<!--
+<BgTheme>
+</BgTheme>
+-->
+
+export const code1 = '<h1>try</h1>';
+
+<LiveComponent code={code1} />
+
+### types
+
+common button types.
+`ghost` type is shown later.
+
+<BgTheme>
+  <AutoSpacedContainer>
+    <Button>Default is Outlined</Button>
+    <Button type='primary'>Primary</Button>
+    <Button type='danger'>Danger</Button>
+    <Button type='dashed'>Dashed</Button>
+    <Button type='link'>Link</Button>
+  </AutoSpacedContainer>
+</BgTheme>
+
+### appearance
+
+buttons are available in semantic colors.
+
+<BgTheme>
+  <AutoSpacedContainer>
+    <Button appearance='primary'>Primary</Button>
+    <Button appearance='secondary'>Secondary</Button>
+    <Button appearance='success'>Success</Button>
+    <Button appearance='info'>Info</Button>
+    <Button appearance='warning'>Warning</Button>
+    <Button appearance='danger'>Danger</Button>
+  </AutoSpacedContainer>
+</BgTheme>
+
+### sizes
+
+<BgTheme>
+  <AutoSpacedContainer>
+    <Button size='small'> Small </Button>
+    <Button> Medium (default) </Button>
+    <Button size='large'> Large </Button>
+  </AutoSpacedContainer>
+</BgTheme>
+
+### colors
+
+### states
+
+<BgTheme>
+  <Button size='small'>Small Button</Button>
+</BgTheme>
+
+### shape
+
+## Tips
+
+## API
+
+## FAQ
+
+## Feedback
+
+## Reference
+
+- https://developer.microsoft.com/en-us/fabric#/controls/web/button
