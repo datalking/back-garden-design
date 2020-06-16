@@ -1,4 +1,4 @@
-import { Store, ID, LayerDefinition, LayerFn, LayerStoreCoreI } from './layerType';
+import { Store, ID, LayerDefinition, LayerFn, LayerStoreCoreI } from './layerTypes';
 
 /**
  * 存放核心图层数据，并提供操作方法

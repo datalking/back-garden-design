@@ -1,0 +1,21 @@
+{
+  "name": "cactus-markdown-editor",
+  "version": "0.0.1",
+  "description": "an embeddable markdown editor using react.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "yarn run demo",
+    "demo": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "markdown",
+    "editor"
+  ],
+  "author": "jinyaoo <jinyaoo@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^16.13.1"
+  },
+  "dependencies": {}
+}

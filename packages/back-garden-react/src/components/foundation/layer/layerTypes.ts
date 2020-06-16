@@ -42,10 +42,10 @@ export type Store = {
 
 export interface LayerStoreCoreI {
   store: Store;
-  getLayer(id: ID): LayerDefinition;
-  getLayersForMountPoint(mountPointId: ID): string[];
-  getStack(): ID[];
-  register(
+  getLayer: (id: ID) => LayerDefinition;
+  getLayersForMountPoint: (mountPointId: ID) => string[];
+  getStack: () => ID[];
+  register: (
     id: ID,
     fn: LayerFn,
     mountPointId: ID,
@@ -53,9 +53,9 @@ export interface LayerStoreCoreI {
     use?: any[],
     defaultArgs?: any[],
     defaultShow?: boolean,
-  ): void;
-  unregister(id: ID): void;
-  updateFn(
+  ) => void;
+  unregister: (id: ID) => void;
+  updateFn: (
     id: ID,
     fn: LayerFn,
     mountPointId: ID,
@@ -63,24 +63,24 @@ export interface LayerStoreCoreI {
     use?: any[],
     defaultArgs?: any[],
     defaultShow?: boolean,
-  ): void;
-  show(id?: ID, args?: any[]): void;
-  hide(id?: ID): void;
-  getIndex(id: ID): number;
-  isActive(id: ID): boolean;
-  update(id: ID, args: any[]): void;
-  reset(id: ID): void;
+  ) => void;
+  show: (id?: ID, args?: any[]) => void;
+  hide: (id?: ID) => void;
+  getIndex: (id: ID) => number;
+  isActive: (id: ID) => boolean;
+  update: (id: ID, args: any[]) => void;
+  reset: (id: ID) => void;
 }
 
 export interface LayerStoreI {
   _core: LayerStoreCoreI;
   _layerSubscriptions: any;
   _mountPointSubscriptions: any;
-  subscribeToLayer(id: ID, fn: Function): Function;
-  subscribeToMountPoint(id: ID, fn: Function): Function;
-  notifyLayer(id: ID): void;
-  notifyMountPoint(id: ID): void;
-  register(
+  subscribeToLayer: (id: ID, fn: Function) => Function;
+  subscribeToMountPoint: (id: ID, fn: Function) => Function;
+  notifyLayer: (id: ID) => void;
+  notifyMountPoint: (id: ID) => void;
+  register: (
     id: ID,
     fn: LayerFn,
     mountPointId: ID,
@@ -88,8 +88,8 @@ export interface LayerStoreI {
     use?: any[],
     defaultArgs?: any[],
     defaultShow?: boolean,
-  ): void;
-  updateFn(
+  ) => void;
+  updateFn: (
     id: ID,
     fn: LayerFn,
     mountPointId: ID,
@@ -97,15 +97,15 @@ export interface LayerStoreI {
     use?: any[],
     defaultArgs?: any[],
     defaultShow?: boolean,
-  ): void;
-  show(id?: ID, args?: any[]): void;
-  hide(id?: ID): void;
-  update(id: ID, args: any[]): void;
-  reset(id: ID): void;
+  ) => void;
+  show: (id?: ID, args?: any[]) => void;
+  hide: (id?: ID) => void;
+  update: (id: ID, args: any[]) => void;
+  reset: (id: ID) => void;
   // ======== 下面都是直接引用LayerStoreCore的方法
-  getLayer(id: ID): LayerDefinition;
-  getStack(): ID[];
-  getIndex(id: ID): number;
-  isActive(id: ID): boolean;
-  getLayersForMountPoint(mountPointId: ID): string[];
+  getLayer: (id: ID) => LayerDefinition;
+  getStack: () => ID[];
+  getIndex: (id: ID) => number;
+  isActive: (id: ID) => boolean;
+  getLayersForMountPoint: (mountPointId: ID) => string[];
 }

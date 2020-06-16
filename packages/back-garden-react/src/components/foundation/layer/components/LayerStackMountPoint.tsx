@@ -1,17 +1,18 @@
 import React from 'react';
 import LayerMountPoint from './LayerMountPoint';
 import { LayerStackContext } from './LayerStackProvider';
-import { ID, LayerStoreI } from '../layerType';
+import { ID, LayerStoreI } from '../layerTypes';
 
 interface LayerStackMountPointProps {
   id: ID;
+  /** 默认是span */
   elementType?: string;
   layerStackWrapperClass?: string;
   layerWrapperClass?: string;
 }
 /**
- * 控制一个挂载点的所有图层的渲染，使用了条件渲染
- * 挂载点的位置可以与layer位置无关，其内容只要isActive为false就是null
+ * 管理一个挂载点的多个图层，控制一个挂载点的所有图层的渲染，使用了条件渲染。
+ * 挂载点的位置可以与layer位置无关，其内容只要isActive为false就是null，
  * 只有active的图层才会被渲染出来添加到DOM
  */
 class LayerStackMountPoint extends React.Component<LayerStackMountPointProps, {}> {
@@ -24,6 +25,7 @@ class LayerStackMountPoint extends React.Component<LayerStackMountPointProps, {}
     layerStackWrapperClass: '',
     layerWrapperClass: '',
   };
+
   layerStore: LayerStoreI;
   unsubscribe: Function;
 
@@ -42,8 +44,8 @@ class LayerStackMountPoint extends React.Component<LayerStackMountPointProps, {}
   }
 
   render() {
-    window.console.log('====props4 LayerStackMountPoint');
-    window.console.log(this.props);
+    // window.console.log('====props4 LayerStackMountPoint');
+    // window.console.log(this.props);
 
     const { id: mountPointId, elementType, layerStackWrapperClass, layerWrapperClass } = this.props;
     return React.createElement(

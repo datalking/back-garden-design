@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayerStoreI } from '../layerType';
+import { LayerStoreI } from '../layerTypes';
 import LayerStore from '../LayerStore';
 
 type LayerStackProviderProps = {

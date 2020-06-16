@@ -1,5 +1,5 @@
 import LayerStoreCore from './LayerStoreCore';
-import { ID, LayerFn, LayerStoreCoreI, LayerStoreI } from './layerType';
+import { ID, LayerFn, LayerStoreCoreI, LayerStoreI } from './layerTypes';
 
 /**
  *  操作LayerStoreCore中的图层信息数据，并渲染到DOM
@@ -19,7 +19,7 @@ class LayerStore implements LayerStoreI {
   getLayersForMountPoint = this._core.getLayersForMountPoint;
 
   subscribeToLayer = (id: ID, fn: Function): Function => {
-    console.log('==== subscribeToLayer', id);
+    // console.log('==== subscribeToLayer', id);
 
     if (typeof this._layerSubscriptions[id] === 'undefined') {
       this._layerSubscriptions[id] = new Set();
@@ -30,7 +30,7 @@ class LayerStore implements LayerStoreI {
   };
 
   subscribeToMountPoint = (id: ID, fn: Function): Function => {
-    console.log('==== subscribeToMountPoint', id);
+    // console.log('==== subscribeToMountPoint', id);
 
     if (typeof this._mountPointSubscriptions[id] === 'undefined') {
       this._mountPointSubscriptions[id] = new Set();
@@ -42,7 +42,7 @@ class LayerStore implements LayerStoreI {
 
   /** 执行id图层的fn函数，渲染出图层内容 */
   notifyLayer = (id: ID): void => {
-    console.log('==== notifyLayer', id);
+    // console.log('==== notifyLayer', id);
 
     if (this._layerSubscriptions[id]) {
       this._layerSubscriptions[id].forEach(fn => fn());
@@ -51,7 +51,7 @@ class LayerStore implements LayerStoreI {
 
   /** 执行id挂载点下所有图层的fn，渲染该挂载点下所有图层的内容 */
   notifyMountPoint = (id: ID): void => {
-    console.log('==== notifyMountPoint', id);
+    // console.log('==== notifyMountPoint', id);
 
     if (this._mountPointSubscriptions[id]) {
       this._mountPointSubscriptions[id].forEach(fn => fn());

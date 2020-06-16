@@ -28,17 +28,17 @@ const styles = {
 
 class ModalDemo extends React.Component {
   render() {
-    window.console.log('====props4 ModalDemo');
-    window.console.log(this.props);
+    // window.console.log('====props4 ModalDemo');
+    // window.console.log(this.props);
 
     return (
       <div>
-        <Layer id='simple_modal' to='screen'>
+        <Layer id='simple_modal_layerId' to='screen'>
           {({ index, hide, show }) => (
             <FixedLayer style={{ background: 'rgba(0,0,0,0.1)' }} onEsc={hide} onClick={hide} zIndex={index * 100}>
               <Window>
                 <div style={styles.header}>Modal 标题</div>
-                <div style={styles.body}></div>
+                <div style={styles.body} />
               </Window>
             </FixedLayer>
           )}
@@ -46,7 +46,7 @@ class ModalDemo extends React.Component {
 
         <div>
           <h4>SIMPLE MODAL</h4>
-          <LayerToggle for='simple_modal'>
+          <LayerToggle for='simple_modal_layerId'>
             {({ show }) => <button onClick={() => show()}>打开 SIMPLE MODAL</button>}
           </LayerToggle>
         </div>

@@ -10,6 +10,6 @@ export * from './layout/AutoSpacedContainer';
 // input
 // display
 // feedback
-// incubator
+// incubator, only for test, will be removed
 // export * from './incubator/Button';
-// export * from './incubator/Search';
+export * from './incubator/Search';

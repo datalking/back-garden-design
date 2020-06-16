@@ -1,7 +1,7 @@
 import React from 'react';
 import { isPrimitiveType } from '../common';
 import LayerMountPoint from './LayerMountPoint';
-import { ID, LayerFn, LayerStoreI } from '../layerType';
+import { ID, LayerFn, LayerStoreI } from '../layerTypes';
 import { LayerStackContext } from './LayerStackProvider';
 
 interface LayerProps {
@@ -14,15 +14,17 @@ interface LayerProps {
   elementType?: any;
 }
 /**
- * 图层组件，注册图层信息到store
+ * 图层组件，注册图层信息到layerStore
  */
 class Layer extends React.Component<LayerProps, {}> {
   // 从context中获取图层信息
   static contextType = LayerStackContext;
   context!: React.ContextType<typeof LayerStackContext>;
+
   static defaultProps = {
     elementType: 'span',
   };
+
   layerStore: LayerStoreI;
 
   constructor(props, context) {
@@ -30,7 +32,7 @@ class Layer extends React.Component<LayerProps, {}> {
     this.layerStore = context.layerStore;
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const { layerStore } = this.context;
     const { id, children, to, use, defaultArgs, defaultShow } = this.props;
     // 注册id图层的定义信息，将children作为Fn
@@ -84,11 +86,11 @@ class Layer extends React.Component<LayerProps, {}> {
   }
 
   render() {
-    window.console.log('====props4 Layer');
-    window.console.log(this.props);
+    // window.console.log('====props4 Layer');
+    // window.console.log(this.props);
 
     const { id, to } = this.props;
-    window.console.log('====!to', !to);
+    // window.console.log('====!to', !to);
 
     if (!to) {
       return <LayerMountPoint id={id} />;

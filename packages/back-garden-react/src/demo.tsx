@@ -27,11 +27,11 @@ const AppButton: FC = () => {
         <Button appearance='secondary'>Secondary</Button>
         <Button appearance='success'>Success</Button>
         <Button appearance='info'>Info</Button>
-        <Button appearance='warn'>Warn</Button>
+        <Button appearance='warning'>Warn</Button>
         <Button appearance='danger'>Danger</Button>
       </AutoSpacedContainer>
     </BgTheme>
   );
 };
 
-ReactDOM.render(<AppButton />, document.getElementById('main'));
+ReactDOM.render(<LayeredApp />, document.getElementById('main'));

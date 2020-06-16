@@ -8,6 +8,7 @@ import styled from 'styled-components';
 //   e => escapeStack.length && e.keyCode === 27 && escapeStack[escapeStack.length - 1].call(null, e),
 //   true,
 // );
+
 interface FixedLayerProps {
   zIndex?: number;
   style?: any;
@@ -36,8 +37,9 @@ class FixedLayerBase extends React.Component<FixedLayerProps, {}> {
   onClick = e => this.props.onClick && e.target === ReactDOM.findDOMNode(this) && this.props.onClick();
 
   render() {
-    window.console.log('====props4 FixedLayer');
-    window.console.log(this.props);
+    // window.console.log('====props4 FixedLayer');
+    // window.console.log(this.props);
+
     const divProps = { ...this.props };
     delete divProps.zIndex;
     delete divProps.onEsc;
